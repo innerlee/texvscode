@@ -8,6 +8,7 @@ const cpFile = require('cp-file');
 const filelist = [
     '.vscode/spellright.dict',
     '.vscode/settings.json',
+    '.vscode/tasks.json',
     '.chktexrc',
     '.gitignore',
     'package.json',
