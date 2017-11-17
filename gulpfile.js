@@ -31,10 +31,11 @@ async function isProjectClean() {
     try {
         status = await new Promise(
             function (resolve, reject) {
-                cp.exec('git status --porcelain --ignore-submodules', function (err, stdout, stderr) {
-                    resolve(stdout.trim());
-                    reject(stderr);
-                });
+                cp.exec('git status --porcelain --ignore-submodules',
+                    function (err, stdout, stderr) {
+                        resolve(stdout.trim());
+                        reject(stderr);
+                    });
             });
     } catch (error) {
         console.log(error);
@@ -53,10 +54,11 @@ async function isSubmoduleClean() {
     try {
         status = await new Promise(
             function (resolve, reject) {
-                cp.exec('git status --porcelain', execoptions, function (err, stdout, stderr) {
-                    resolve(stdout.trim());
-                    reject(stderr);
-                });
+                cp.exec('git status --porcelain', execoptions,
+                    function (err, stdout, stderr) {
+                        resolve(stdout.trim());
+                        reject(stderr);
+                    });
             });
     } catch (error) {
         console.log(error);
@@ -100,11 +102,12 @@ gulp.task('UpdateFromSubmodule', async function (cb) {
 })
 
 gulp.task('PullSubmodule', function (cb) {
-    cp.exec('git pull origin master', execoptions, function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-    });
+    cp.exec('git pull origin master', execoptions,
+        function (err, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+            cb(err);
+        });
 })
 
 gulp.task('InstallSubmodule', function (cb) {
@@ -113,18 +116,22 @@ gulp.task('InstallSubmodule', function (cb) {
         return
     }
     mkpath('sub_modules', function (err) {
-        if (err) throw err;
+        if (err) {
+            console.log(err)
+            throw err;
+        }
         console.log('Directory sub_modules created');
+        const options = {
+            encoding: 'utf8',
+            timeout: 10000,
+            cwd: './sub_modules',
+            env: null
+        };
+        cp.exec('git submodule add -b master https://github.com/innerlee/texvscode.git', options,
+            function (err, stdout, stderr) {
+                console.log(stdout);
+                console.log(stderr);
+                cb(err);
+            });
     })
-    const options = {
-        encoding: 'utf8',
-        timeout: 10000,
-        cwd: './sub_modules',
-        env: null
-    };
-    cp.exec('git submodule add -b master https://github.com/innerlee/texvscode.git', options, function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-    });
 })
