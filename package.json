@@ -1,0 +1,27 @@
+{
+  "name": "tex",
+  "version": "1.0.0",
+  "description": "bufan tex tasks",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "child-process": "^1.0.2",
+    "mkpath": "^1.0.0",
+    "cp-file": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tex",
+    "paper",
+    "bufan"
+  ],
+  "author": "lizz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/innerlee/thesis/issues"
+  },
+  "homepage": "https://github.com/innerlee/thesis#readme"
+}
