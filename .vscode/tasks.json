@@ -5,21 +5,25 @@
     "tasks": [
         {
             "type": "gulp",
-            "task": "MoveToSubmodule",
+            "label": "Submodule: To",
+            "task": "ToSubmodule",
             "problemMatcher": []
         },
         {
             "type": "gulp",
-            "task": "UpdateFromSubmodule",
+            "label": "Submodule: From",
+            "task": "FromSubmodule",
             "problemMatcher": []
         },
         {
             "type": "gulp",
+            "label": "Submodule: Install",
             "task": "InstallSubmodule",
             "problemMatcher": []
         },
         {
             "type": "gulp",
+            "label": "Submodule: Pull",
             "task": "PullSubmodule",
             "problemMatcher": []
         }

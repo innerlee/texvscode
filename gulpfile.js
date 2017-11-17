@@ -73,7 +73,7 @@ async function isSubmoduleClean() {
     }
 }
 
-gulp.task('MoveToSubmodule', async function (cb) {
+gulp.task('ToSubmodule', async function (cb) {
     if (!await isSubmoduleClean()) {
         console.warn('submodule not clean, please first commit!')
         return
@@ -87,7 +87,7 @@ gulp.task('MoveToSubmodule', async function (cb) {
     }
 })
 
-gulp.task('UpdateFromSubmodule', async function (cb) {
+gulp.task('FromSubmodule', async function (cb) {
     if (!await isProjectClean()) {
         console.warn('project not clean, please first commit!')
         return
