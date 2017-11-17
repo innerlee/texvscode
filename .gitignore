@@ -5,6 +5,7 @@ thesis.pdf
 main.pdf
 bf.pdf
 *.tmp
+package-lock.json
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

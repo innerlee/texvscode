@@ -22,6 +22,8 @@
     "*.glo": true,
     "*.idx": true,
     "thesis.pdf": true,
+    "package.json": true,
+    "package-lock.json": true,
     "*(busy)*": true,
     "main.pdf": true,
     "bf.pdf": true,
