@@ -25,6 +25,7 @@
     "*(busy)*": true,
     "main.pdf": true,
     "bf.pdf": true,
+    "bufan.pdf": true,
     "*.vscodeLog": true,
     ".gitignore": true,
     ".vscode": true,
