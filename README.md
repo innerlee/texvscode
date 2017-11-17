@@ -1,0 +1,2 @@
+# texvscode
+.vscode settings
