@@ -27,6 +27,7 @@
     "bf.pdf": true,
     "*.vscodeLog": true,
     ".gitignore": true,
+    ".gitmodules": true,
     ".vscode": true,
     "*.fdb_latexmk": true,
     "*.synctex": true,
