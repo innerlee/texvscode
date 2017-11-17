@@ -5,24 +5,25 @@ const mkpath = require('mkpath');
 const fs = require('fs');
 const cpFile = require('cp-file');
 
+const filelist = [
+    '.vscode/spellright.dict',
+    '.vscode/settings.json',
+    '.chktexrc',
+    '.gitignore',
+    'package.json',
+    'mmstyles.sty',
+    'gulpfile.js'
+]
+
 function isSubmoduleReady() {
     return fs.existsSync('sub_modules/texvscode')
 }
 
 gulp.task('MoveToSubmodule', function (cb) {
-    files = [
-        '.vscode/spellright.dict',
-        '.vscode/settings.json',
-        '.chktexrc',
-        '.gitignore',
-        'package.json',
-        'mmstyles.sty',
-        'gulpfile.js'
-    ]
-    for (const f of files) {
+    for (const f of filelist) {
         console.log(`copying ${f}`)
         cpFile(f, path.join('sub_modules/texvscode', f)).then(() => {
-            console.log('done.');
+            console.log(`done ${f}.`);
         });
     }
 })
