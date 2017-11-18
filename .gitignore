@@ -4,6 +4,7 @@ sub_modules/
 thesis.pdf
 main.pdf
 bf.pdf
+example_paper.pdf
 ijcai18.pdf
 *.tmp
 package-lock.json
