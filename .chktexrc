@@ -390,6 +390,8 @@ Silent
 
     \STATE \REPEAT \ENDIF \ENDFOR
 
+    \eg \ie \etc \etal \st \wrt \wprob
+
 }[
 # Here you can put regular expressions to match Silent macros.  It was
 # designed for  the case where you  have many custom macros  sharing a
