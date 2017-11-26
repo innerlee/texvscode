@@ -135,3 +135,7 @@ gulp.task('InstallSubmodule', function (cb) {
             });
     })
 })
+
+gulp.task('OpenSubmodule', function (cb) {
+    cp.exec('start "" "sub_modules\\texvscode"');
+})

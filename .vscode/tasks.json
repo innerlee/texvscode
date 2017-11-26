@@ -26,6 +26,12 @@
             "label": "Submodule: Pull",
             "task": "PullSubmodule",
             "problemMatcher": []
+        },
+        {
+            "type": "gulp",
+            "label": "Submodule: Open",
+            "task": "OpenSubmodule",
+            "problemMatcher": []
         }
     ]
 }
