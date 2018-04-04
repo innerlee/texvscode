@@ -1,6 +1,6 @@
 ## vs code
 node_modules/
-sub_modules/
+# sub_modules/
 thesis.pdf
 main.pdf
 bf.pdf
