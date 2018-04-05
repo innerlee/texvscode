@@ -142,5 +142,5 @@ gulp.task('OpenSubmodule', function (cb) {
 
 gulp.task('InitSubmodule', function (cb) {
     cp.exec('git submodule init');
-    cp.exec('git submodule update');
+    cp.exec('git submodule update --remote');
 })
